@@ -60,16 +60,18 @@ const TableView = props => {
     [header[0], hands[player]]
   ]
   return (
+    <div class="jundgements">
     <table>
       <tbody>
         {contents.map(([header, content]) => (
           <tr key={header}>
-            <th>{header}</th>
+            <h3><th>{header}</th></h3>
             <td>{content}</td>
           </tr>
         ))}
       </tbody>
     </table>
+    </div>
   )
 }
 
@@ -77,13 +79,19 @@ const InputBox = props => {
   const { hands, onClick } = props
   return (
     <>
+　　　<div class="button-area">
       {hands.map((v, i) => (
         <button key={v} onClick={() => onClick(i)}>
           {v}
         </button>
       ))}
+      </div>
     </>
   )
 }
+
+
+
+
 
 export default JangKengGame
